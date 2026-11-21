@@ -10,3 +10,21 @@ abstract class InternetConnection {
         System.out.println("Preparing internet connection...");
     }
 }
+
+class WiFiConnection extends InternetConnection {
+
+    @Override
+    void connect() {
+        super.showMessage();
+        System.out.println("Connected to the internet through WiFi.");
+    }
+}
+
+class MobileDataConnection extends InternetConnection {
+
+    @Override
+    void connect() {
+        super.showMessage();
+        System.out.println("Connected to the internet through Mobile Data.");
+    }
+}
