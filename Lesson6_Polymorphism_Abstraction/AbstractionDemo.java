@@ -28,3 +28,21 @@ class MobileDataConnection extends InternetConnection {
         System.out.println("Connected to the internet through Mobile Data.");
     }
 }
+
+public class AbstractionDemoJava {
+
+    public static void main(String[] args) {
+
+        InternetConnection wifi = new WiFiConnection();
+        InternetConnection mobileData = new MobileDataConnection();
+
+        System.out.println("BASIC INTERNET CONNECTION SYSTEM");
+        System.out.println("--------------------------------");
+
+        wifi.connect();
+
+        System.out.println();
+
+        mobileData.connect();
+    }
+}
